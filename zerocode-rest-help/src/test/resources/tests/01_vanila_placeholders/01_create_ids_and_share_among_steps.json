@@ -1,0 +1,72 @@
+{
+  "scenarioName": "01_create_idsand_share_among_steps.json",
+  "steps": [
+    {
+      "name": "create_customer_id_1",
+      "url": "org.jsmart.zerocode.testhelp.utils.YourIdGenerator",
+      "operation": "create",
+      "request": "customer_id_team3_", //<--- param string to the create() method
+      "assertions": "customer_id_team3_with-001"
+    },
+    {
+      "name": "create_customer_id_1",
+      "url": "org.jsmart.zerocode.testhelp.utils.YourIdGenerator",
+      "operation": "createInternalId",
+      "request": "id_team3_", //<--- param string to the create() method
+      "assertions": {
+        "id" : "id_team3_internal-"
+      }
+    },
+    {
+      "name": "create_customer_id_2",
+      "url": "org.jsmart.zerocode.testhelp.utils.YourIdGenerator",
+      "operation": "create",
+      "request": "person_id_${RANDOM.STRING:5}", //<--- person_id_<random_string>
+      "assertions": "$NOT.NULL"
+    },
+    {
+      "name": "create_customer_id_3",
+      "url": "org.jsmart.zerocode.testhelp.utils.YourIdGenerator",
+      "operation": "createStaticString",
+      "request": "999", //<--- person_id_<random_string>
+      "assertions": "999"
+    },
+    {
+      "name": "get_google_web_bath_room",
+      "url": "http://localhost:9999/google-bath-services/home/bathroom/${$.create_customer_id_3.response}",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body" : {
+          "id" : 999,
+          "rooms.SIZE" : 2
+        }
+      }
+    },
+    {
+      "name": "create_customer_id_4",
+      "url": "org.jsmart.zerocode.testhelp.utils.YourIdGenerator",
+      "operation": "createStaticJson",
+      "request": "999", //<--- person_id_<random_string>
+      "assertions": {
+        "id": "999"
+      }
+    },
+    {
+      "name": "get_google_web_bath_room",
+      "url": "/home/bathroom/${$.create_customer_id_4.response.id}",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body" : {
+          "id" : 999,
+          "rooms.SIZE" : 2
+        }
+      }
+    }
+  ]
+}

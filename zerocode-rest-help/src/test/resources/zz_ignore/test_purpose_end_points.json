@@ -1,0 +1,48 @@
+{
+  "name" : "Sample Google Web-Bathroom-Simulator",
+  "apis" : [
+    {
+      "name": "Sample_Get_Bathroom_by_Id",
+      "operation": "GET",
+      "url": "/google-bath-services/home/bathroom/999",
+      "response": {
+        "status": 200,
+        "body": {
+          "id": 999,
+          "name": "Shower-Basics",
+          "availability": true,
+          "rooms":[
+            {
+              "name": "Bed Room"
+            },
+            {
+              "name": "Guest Room"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Sample_POST_Bathroom_Create",
+      "operation": "POST",
+      "url": "/google-bath-services/home/bathroom",
+      "response": {
+        "status": 201,
+        "body": {
+          "id": 1000,
+          "name": "Shower-With-1000-Holes",
+          "availability": true,
+          "rooms":[
+            {
+              "name": "Master Bed Room"
+            },
+            {
+              "name": "Tiny Guest Room"
+            }
+          ]
+
+        }
+      }
+    }
+  ]
+}
