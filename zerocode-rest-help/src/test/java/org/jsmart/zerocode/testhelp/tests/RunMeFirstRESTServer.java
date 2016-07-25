@@ -12,19 +12,19 @@ import org.slf4j.LoggerFactory;
  *
  */
 @ApiRepo("zz_ignore")
-public class RunMeFirstToStartSampleRESTServer extends SimpleRestJsonSimulator {
-    private static final Logger logger = LoggerFactory.getLogger(RunMeFirstToStartSampleRESTServer.class);
+public class RunMeFirstRESTServer extends SimpleRestJsonSimulator {
+    private static final Logger logger = LoggerFactory.getLogger(RunMeFirstRESTServer.class);
 
     public static final int PORT = 9999;
 
-    public RunMeFirstToStartSampleRESTServer(int port) {
+    public RunMeFirstRESTServer(int port) {
         super(port);
     }
 
     public static void main(String[] args) {
         logger.info("\n### REST Helper web-service starting...");
 
-        new RunMeFirstToStartSampleRESTServer(PORT).start();
+        new RunMeFirstRESTServer(PORT).start();
 
         logger.info("\n### REST Helper web-service started.");
 

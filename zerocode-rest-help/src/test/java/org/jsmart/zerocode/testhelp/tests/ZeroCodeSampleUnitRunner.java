@@ -1,8 +1,8 @@
 package org.jsmart.zerocode.testhelp.tests;
 
-import org.jsmart.smarttester.core.domain.JsonTestCase;
-import org.jsmart.smarttester.core.domain.TargetEnv;
-import org.jsmart.smarttester.core.runner.ZeroCodeJUnitRunner;
+import org.jsmart.zerocode.core.domain.JsonTestCase;
+import org.jsmart.zerocode.core.domain.TargetEnv;
+import org.jsmart.zerocode.core.runner.ZeroCodeJUnitRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -14,7 +14,7 @@ public class ZeroCodeSampleUnitRunner{
      *
      * Run the below REST server first, before running any tests.
      *
-     * ---> org.jsmart.zerocode.testhelp.tests.RunMeFirstToStartSampleRESTServer
+     * ---> org.jsmart.zerocode.testhelp.tests.RunMeFirstRESTServer
      *
      * Right click --> Run
      *
@@ -38,7 +38,7 @@ public class ZeroCodeSampleUnitRunner{
      *
      * Run the below REST server first, before running any tests.
      *
-     * ---> org.jsmart.zerocode.testhelp.tests.RunMeFirstToStartSampleRESTServer
+     * ---> org.jsmart.zerocode.testhelp.tests.RunMeFirstRESTServer
      *
      * Right click --> Run
      *
