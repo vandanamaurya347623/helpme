@@ -1,0 +1,20 @@
+{
+  "scenarioName": "Vanilla - Execute multiple times - Step",
+  "steps": [
+    {
+      "loop": 2,
+      "name": "get_room_details",
+      "url": "http://localhost:9999/google-bath-services/home/bathroom/101",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body": {
+          "id": 101
+        }
+
+      }
+    }
+  ]
+}

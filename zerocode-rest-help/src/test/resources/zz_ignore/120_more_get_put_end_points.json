@@ -1,0 +1,47 @@
+{
+  "name": "More GET PUT End points",
+  "apis": [
+    {
+      "name": "get_shower_details_xx",
+      "operation": "GET",
+      "url": "/google-bath-services/home/bathroom/101",
+      "response": {
+        "status": 200,
+        "body": {
+          "id": 101,
+          "name": "Shower-Basics",
+          "availability": true,
+          "rooms": [
+            {
+              "name": "Bed Room 101"
+            },
+            {
+              "name": "Guest Room 101"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "get_shower_details_yy",
+      "operation": "GET",
+      "url": "/google-bath-services/home/bathroom/102",
+      "response": {
+        "status": 200,
+        "body": {
+          "id": 102,
+          "name": "Shower-Basics",
+          "availability": false,
+          "rooms": [
+            {
+              "name": "Bed Room 102"
+            },
+            {
+              "name": "Guest Room 102"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

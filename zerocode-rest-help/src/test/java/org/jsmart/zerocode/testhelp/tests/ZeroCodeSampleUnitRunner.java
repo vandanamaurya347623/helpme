@@ -33,6 +33,18 @@ public class ZeroCodeSampleUnitRunner{
 
     }
 
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/02_using_step_loop.json")
+    public void willExecuteStepUsing_loop() throws Exception {
+
+    }
+
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/03_using_scenario_loop.json")
+    public void willExecuteScenarioUsing_loop() throws Exception {
+
+    }
+
     /*
      * NOTE:
      *
