@@ -5,15 +5,15 @@ No.,scenarioName,scenarioLoop,stepName,stepLoop,correlationId,requestTimeStamp,r
 4,02 Will clone a aborted Hotel Room,0,create_parent_HR,0,289edcd6-87e0-4c64-af1a-b8b71d7af69d,2016-07-28T09:44:14.318,2016-07-28T09:44:14.322,4,PASSED
 5,03 Will not clone a aborted Hotel Room,0,create_parent_HR,0,51c2d298-b597-4785-aa67-9918e9a59475,2016-07-28T09:44:14.332,2016-07-28T09:44:14.338,6,FAILED
 6,04_AS-19686_HR_time_lines_sorted_by_lastupdatedtime,0,create_HR_1of2,0,5b94a78b-d4cb-422e-857a-15f5d6227e2e,2016-07-28T09:44:14.350,2016-07-28T09:44:14.354,4,FAILED
-7,04_create_internal_handle_and_share_among_steps,0,create_internal_handle_1,0,f01d078e-cd35-47f6-8d75-88af1e9dae23,2016-07-28T09:44:14.181,2016-07-28T09:44:14.194,300,PASSED
-8,04_create_internal_handle_and_share_among_steps,0,create_internal_handle_2,0,beb32c98-ca87-419e-8a30-23c51cb66249,2016-07-28T09:44:14.200,2016-07-28T09:44:14.201,1,PASSED
-9,04_create_internal_handle_and_share_among_steps,0,create_parent_HR,0,bc937370-6c65-4929-821b-0c5ea044e52a,2016-07-28T09:44:14.204,2016-07-28T09:44:14.222,18,FAILED
+7,04_create_internal_handCtrl_and_share_among_steps,0,create_internal_handCtrl_1,0,f01d078e-cd35-47f6-8d75-88af1e9dae23,2016-07-28T09:44:14.181,2016-07-28T09:44:14.194,300,PASSED
+8,04_create_internal_handCtrl_and_share_among_steps,0,create_internal_handCtrl_2,0,beb32c98-ca87-419e-8a30-23c51cb66249,2016-07-28T09:44:14.200,2016-07-28T09:44:14.201,1,PASSED
+9,04_create_internal_handCtrl_and_share_among_steps,0,create_parent_HR,0,bc937370-6c65-4929-821b-0c5ea044e52a,2016-07-28T09:44:14.204,2016-07-28T09:44:14.222,18,FAILED
 10,06_AS_19798_bulk_extraRoom_notes,0,create_HR,0,097e7389-574c-4210-8e1e-6a799c469f37,2016-07-28T09:44:14.376,2016-07-28T09:44:14.379,3,PASSED
 11,07_direct_extraRoom,0,add_direct_extraRoom,0,710460f3-3f34-4d14-97b5-ee69170608fd,2016-07-28T09:44:14.387,2016-07-28T09:44:14.391,4,PASSED
 12,09_AS_20207_add_update_address_to_direct_extraRoom makes you sad,0,create_HR,0,e1adfe13-6e56-4aad-a049-12fd6f4ff5e9,2016-07-28T09:44:14.400,2016-07-28T09:44:14.403,3,PASSED
 13,10_AS_20207_add_update_address_to_direct_extraRoom makes you sad,0,create_HR,0,f4f702b9-af22-4497-8018-4603054de614,2016-07-28T09:44:14.414,2016-07-28T09:44:14.419,5,PASSED
 14,11_AS_20207_add_update_address_to_direct_extraRoom_line1 update makes you sad,0,create_HR,0,23ff7097-d0a8-46fa-8f81-859ab881f6ad,2016-07-28T09:44:14.429,2016-07-28T09:44:14.435,6,PASSED
-15,12_AS-20301_Update HR will not work if neither handle not id for extraRoom,0,update_HR,0,3794649d-98c5-41a9-9159-26ba4401c14a,2016-07-28T09:44:14.447,2016-07-28T09:44:14.455,900,FAILED
+15,12_AS-20301_Update HR will not work if neither handCtrl not id for extraRoom,0,update_HR,0,3794649d-98c5-41a9-9159-26ba4401c14a,2016-07-28T09:44:14.447,2016-07-28T09:44:14.455,900,FAILED
 16,AS-20425_Error page displayed on searching invalid port refs - exaplin how,0,create_HR,0,b59bcede-5cdc-4ce1-91e8-fef5d54e1bbb,2016-07-28T09:44:14.466,2016-07-28T09:44:14.471,5,PASSED
 17,Vanilla - Will not clone a aborted Hotel Room,0,create_parent_HR,0,2c60a6c0-4f99-4cb1-b10c-78c7fe833b6f,2016-07-28T09:44:14.248,2016-07-28T09:44:14.253,5,PASSED
 18,Will Create and Get an Address,0,create_postal_address,0,575d01fa-758b-4ad2-9e03-72e81aa754e3,2016-07-28T09:44:14.270,2016-07-28T09:44:14.276,6,PASSED
@@ -25,15 +25,15 @@ No.,scenarioName,scenarioLoop,stepName,stepLoop,correlationId,requestTimeStamp,r
 24,02 Will clone a aborted Hotel Room,0,create_parent_HR,0,289edcd6-87e0-4c64-af1a-b8b71d7af69d,2016-07-28T09:44:14.318,2016-07-28T09:44:14.322,4,PASSED
 25,03 Will not clone a aborted Hotel Room,0,create_parent_HR,0,51c2d298-b597-4785-aa67-9918e9a59475,2016-07-28T09:44:14.332,2016-07-28T09:44:14.338,6,PASSED
 26,04_AS-19686_HR_time_lines_sorted_by_lastupdatedtime,0,create_HR_1of2,0,5b94a78b-d4cb-422e-857a-15f5d6227e2e,2016-07-28T09:44:14.350,2016-07-28T09:44:14.354,4,FAILED
-27,04_create_internal_handle_and_share_among_steps,0,create_internal_handle_1,0,f01d078e-cd35-47f6-8d75-88af1e9dae23,2016-07-28T09:44:14.181,2016-07-28T09:44:14.194,13,PASSED
-28,04_create_internal_handle_and_share_among_steps,0,create_internal_handle_2,0,beb32c98-ca87-419e-8a30-23c51cb66249,2016-07-28T09:44:14.200,2016-07-28T09:44:14.201,1,PASSED
-29,04_create_internal_handle_and_share_among_steps,0,create_parent_HR,0,bc937370-6c65-4929-821b-0c5ea044e52a,2016-07-28T09:44:14.204,2016-07-28T09:44:14.222,18,FAILED
+27,04_create_internal_handCtrl_and_share_among_steps,0,create_internal_handCtrl_1,0,f01d078e-cd35-47f6-8d75-88af1e9dae23,2016-07-28T09:44:14.181,2016-07-28T09:44:14.194,13,PASSED
+28,04_create_internal_handCtrl_and_share_among_steps,0,create_internal_handCtrl_2,0,beb32c98-ca87-419e-8a30-23c51cb66249,2016-07-28T09:44:14.200,2016-07-28T09:44:14.201,1,PASSED
+29,04_create_internal_handCtrl_and_share_among_steps,0,create_parent_HR,0,bc937370-6c65-4929-821b-0c5ea044e52a,2016-07-28T09:44:14.204,2016-07-28T09:44:14.222,18,FAILED
 30,06_AS_19798_bulk_extraRoom_notes,0,create_HR,0,097e7389-574c-4210-8e1e-6a799c469f37,2016-07-28T09:44:14.376,2016-07-28T09:44:14.379,3,PASSED
 31,07_direct_extraRoom,0,add_direct_extraRoom,0,710460f3-3f34-4d14-97b5-ee69170608fd,2016-07-28T09:44:14.387,2016-07-28T09:44:14.391,4,PASSED
 32,09_AS_20207_add_update_address_to_direct_extraRoom makes you sad,0,create_HR,0,e1adfe13-6e56-4aad-a049-12fd6f4ff5e9,2016-07-28T09:44:14.400,2016-07-28T09:44:14.403,3,PASSED
 33,10_AS_20207_add_update_address_to_direct_extraRoom makes you sad,0,create_HR,0,f4f702b9-af22-4497-8018-4603054de614,2016-07-28T09:44:14.414,2016-07-28T09:44:14.419,5,PASSED
 34,11_AS_20207_add_update_address_to_direct_extraRoom_line1 update makes you sad,0,create_HR,0,23ff7097-d0a8-46fa-8f81-859ab881f6ad,2016-07-28T09:44:14.429,2016-07-28T09:44:14.435,6,PASSED
-35,12_AS-20301_Update HR will not work if neither handle not id for extraRoom,0,update_HR,0,3794649d-98c5-41a9-9159-26ba4401c14a,2016-07-28T09:44:14.447,2016-07-28T09:44:14.455,8,PASSED
+35,12_AS-20301_Update HR will not work if neither handCtrl not id for extraRoom,0,update_HR,0,3794649d-98c5-41a9-9159-26ba4401c14a,2016-07-28T09:44:14.447,2016-07-28T09:44:14.455,8,PASSED
 36,AS-20425_Error page displayed on searching invalid port refs - exaplin how,0,create_HR,0,b59bcede-5cdc-4ce1-91e8-fef5d54e1bbb,2016-07-28T09:44:14.466,2016-07-28T09:44:14.471,5,PASSED
 37,Vanilla - Will not clone a aborted Hotel Room,0,create_parent_HR,0,2c60a6c0-4f99-4cb1-b10c-78c7fe833b6f,2016-07-28T09:44:14.248,2016-07-28T09:44:14.253,5,PASSED
 38,Will Create and Get an Address,0,create_postal_address,0,575d01fa-758b-4ad2-9e03-72e81aa754e3,2016-07-28T09:44:14.270,2016-07-28T09:44:14.276,6,PASSED
