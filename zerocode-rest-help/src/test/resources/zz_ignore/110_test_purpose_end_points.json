@@ -1,43 +1,43 @@
 {
-  "name" : "Sample Google Web-Bathroom-Simulator",
+  "name" : "Sample Google Web-Employee-Simulator",
   "apis" : [
     {
-      "name": "Sample_Get_Bathroom_by_Id",
+      "name": "Sample_Get_Employee_by_Id",
       "operation": "GET",
-      "url": "/google-bath-services/home/bathroom/999",
+      "url": "/google-emp-services/home/employees/999",
       "response": {
         "status": 200,
         "body": {
           "id": 999,
-          "name": "Shower-Basics",
+          "name": "Larry P",
           "availability": true,
-          "rooms":[
+          "addresses":[
             {
-              "name": "Bed Room"
+              "gpsLocation": "x3000-y5000z-70000"
             },
             {
-              "name": "Guest Room"
+              "gpsLocation": "x3000-y5000z-70000S"
             }
           ]
         }
       }
     },
     {
-      "name": "Sample_POST_Bathroom_Create",
+      "name": "Sample_POST_Employee_Create",
       "operation": "POST",
-      "url": "/google-bath-services/home/bathroom",
+      "url": "/google-emp-services/home/employees",
       "response": {
         "status": 201,
         "body": {
           "id": 1000,
-          "name": "Shower-With-1000-Holes",
+          "name": "Larry R",
           "availability": true,
-          "rooms":[
+          "addresses":[
             {
-              "name": "Master Bed Room"
+              "gpsLocation": "x3000-y5000z-70000"
             },
             {
-              "name": "Tiny Guest Room"
+              "gpsLocation": "x3000-y9000z-2500-N"
             }
           ]
 

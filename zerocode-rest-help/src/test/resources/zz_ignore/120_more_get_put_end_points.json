@@ -2,42 +2,42 @@
   "name": "More GET PUT End points",
   "apis": [
     {
-      "name": "get_shower_details_xx",
+      "name": "get_director_details_xx",
       "operation": "GET",
-      "url": "/google-bath-services/home/bathroom/101",
+      "url": "/google-emp-services/home/employees/101",
       "response": {
         "status": 200,
         "body": {
           "id": 101,
-          "name": "Shower-Basics",
+          "name": "Larry S",
           "availability": true,
-          "rooms": [
+          "addresses": [
             {
-              "name": "Bed Room 101"
+              "gpsLocation": "x3000-y5000z-70000-NW"
             },
             {
-              "name": "Guest Room 101"
+              "gpsLocation": "x3000-y5000z-70000-SW"
             }
           ]
         }
       }
     },
     {
-      "name": "get_shower_details_yy",
+      "name": "get_director_details_yy",
       "operation": "GET",
-      "url": "/google-bath-services/home/bathroom/102",
+      "url": "/google-emp-services/home/employees/102",
       "response": {
         "status": 200,
         "body": {
           "id": 102,
-          "name": "Shower-Basics",
+          "name": "Larry T",
           "availability": false,
-          "rooms": [
+          "addresses": [
             {
-              "name": "Bed Room 102"
+              "gpsLocation": "x3000-y5000z-70000-NE"
             },
             {
-              "name": "Guest Room 102"
+              "gpsLocation": "x3000-y5000z-70000-SE"
             }
           ]
         }

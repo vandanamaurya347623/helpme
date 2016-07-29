@@ -33,7 +33,7 @@
     },
     {
       "name": "get_google_web_bath_room",
-      "url": "http://localhost:9999/google-bath-services/home/bathroom/${$.create_customer_id_3.response}",
+      "url": "http://localhost:9999/google-emp-services/home/employees/${$.create_customer_id_3.response}",
       "operation": "GET",
       "request": {
       },
@@ -41,7 +41,7 @@
         "status": 200,
         "body" : {
           "id" : 999,
-          "rooms.SIZE" : 2
+          "addresses.SIZE" : 2
         }
       }
     },
@@ -56,7 +56,7 @@
     },
     {
       "name": "get_google_web_bath_room",
-      "url": "/home/bathroom/${$.create_customer_id_4.response.id}",
+      "url": "/home/employees/${$.create_customer_id_4.response.id}",
       "operation": "GET",
       "request": {
       },
@@ -64,7 +64,7 @@
         "status": 200,
         "body" : {
           "id" : 999,
-          "rooms.SIZE" : 2
+          "addresses.SIZE" : 2
         }
       }
     }

@@ -4,7 +4,7 @@
     {
       "loop": 2,
       "name": "get_room_details",
-      "url": "http://localhost:9999/google-bath-services/home/bathroom/101",
+      "url": "http://localhost:9999/google-emp-services/home/employees/101",
       "operation": "GET",
       "request": {
       },

@@ -3,7 +3,7 @@
   "steps": [
     {
       "name": "step1_get_google_web_bath_room",
-      "url": "http://localhost:9999/google-bath-services/home/bathroom/999",
+      "url": "http://localhost:9999/google-emp-services/home/employees/999",
       "operation": "GET",
       "request": {
       },

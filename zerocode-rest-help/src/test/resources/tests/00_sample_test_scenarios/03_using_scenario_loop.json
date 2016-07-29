@@ -4,7 +4,7 @@
   "steps": [
     {
       "name": "get_room_details",
-      "url": "http://localhost:9999/google-bath-services/home/bathroom/101",
+      "url": "http://localhost:9999/google-emp-services/home/employees/101",
       "operation": "GET",
       "request": {
       },
@@ -18,7 +18,7 @@
     },
     {
       "name": "get_another_room_details",
-      "url": "http://localhost:9999/google-bath-services/home/bathroom/102",
+      "url": "http://localhost:9999/google-emp-services/home/employees/102",
       "operation": "GET",
       "request": {
       },
