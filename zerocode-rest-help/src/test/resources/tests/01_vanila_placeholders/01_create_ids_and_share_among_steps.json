@@ -32,7 +32,7 @@
       "assertions": "999"
     },
     {
-      "name": "get_google_web_bath_room",
+      "name": "get_google_emp_details",
       "url": "http://localhost:9999/google-emp-services/home/employees/${$.create_customer_id_3.response}",
       "operation": "GET",
       "request": {
@@ -55,7 +55,7 @@
       }
     },
     {
-      "name": "get_google_web_bath_room",
+      "name": "get_google_emp_details",
       "url": "/home/employees/${$.create_customer_id_4.response.id}",
       "operation": "GET",
       "request": {

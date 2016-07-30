@@ -1,5 +1,5 @@
 {
-  "scenarioName": "Vanilla - Will Get Google Employee Details",
+  "scenarioName": "09 asserting string messages part and whole",
   "steps": [
     {
       "name": "step1_get_google_emp_details",
@@ -8,7 +8,11 @@
       "request": {
       },
       "assertions": {
-        "status": 200
+        "status": 200,
+        "body": {
+          "id": 999,
+          "name": "$CONTAINS.STRING:Larry"
+        }
       }
     }
   ]

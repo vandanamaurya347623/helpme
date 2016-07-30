@@ -2,17 +2,17 @@ package org.jsmart.zerocode.testhelp.tests;
 
 import org.jsmart.zerocode.core.domain.JsonTestCase;
 import org.jsmart.zerocode.core.domain.TargetEnv;
-import org.jsmart.zerocode.core.runner.ZeroCodeJUnitRunner;
+import org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @TargetEnv("config_hosts_sample.properties")
-@RunWith(ZeroCodeJUnitRunner.class)
+@RunWith(ZeroCodeUnitRunner.class)
 public class ZeroCodeSampleUnitRunner{
     /*
      * NOTE:
      *
-     * Run the below REST server first, before running any tests.
+     * Run the below REST server first, before running the following sample tests.
      *
      * ---> org.jsmart.zerocode.testhelp.tests.RunMeFirstRESTServer
      *
@@ -45,10 +45,40 @@ public class ZeroCodeSampleUnitRunner{
 
     }
 
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/04_asserting_null_or_notnull_fields.json")
+    public void willAssertUsing_placeHolders() throws Exception {
+
+    }
+
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/05_asserting_empty_array.json")
+    public void willAssertUsing_emptyArray() throws Exception {
+
+    }
+
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/06_asserting_null_or_notnull_json_content.json")
+    public void willAssertNullNotNul_jsonBlock() throws Exception {
+
+    }
+
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/07_asserting_greaterthan_lesserthan_number.json")
+    public void willAssert_greaterOrLesser() throws Exception {
+
+    }
+
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/09_asserting_string_messages.json")
+    public void willAssert_containsString() throws Exception {
+
+    }
+
     /*
      * NOTE:
      *
-     * Run the below REST server first, before running any tests.
+     * Run the below REST server first, before running any of the above sample tests.
      *
      * ---> org.jsmart.zerocode.testhelp.tests.RunMeFirstRESTServer
      *

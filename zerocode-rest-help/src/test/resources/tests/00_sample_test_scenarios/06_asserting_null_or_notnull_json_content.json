@@ -1,0 +1,30 @@
+{
+  "scenarioName": "assert json content",
+  "steps": [
+    {
+      "name": "step1_get_google_emp_details",
+      "url": "http://localhost:9999/google-emp-services/home/employees/999",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body": {
+          "addresses":"$NOT.NULL" //<--asserting entire content
+        }
+      }
+    },
+    {
+      "name": "step2_get_google_emp_details",
+      "url": "http://localhost:9999/google-emp-services/home/employees/999",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body": "$NOT.NULL" //<--asserting entire content
+      }
+    }
+
+  ]
+}

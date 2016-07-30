@@ -18,6 +18,9 @@
             {
               "gpsLocation": "x3000-y5000z-70000S"
             }
+          ],
+          "vehicles": [
+
           ]
         }
       }

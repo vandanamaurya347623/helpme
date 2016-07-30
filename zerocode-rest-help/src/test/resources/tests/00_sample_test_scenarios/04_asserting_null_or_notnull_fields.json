@@ -1,0 +1,27 @@
+{
+  "scenarioName": "assert with placeholders NOT.NULL",
+  "steps": [
+    {
+      "name": "step1_get_google_emp_details",
+      "url": "http://localhost:9999/google-emp-services/home/employees/999",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body": {
+          "id": "$NOT.NULL",
+          "salary": "$NULL",
+          "name": "$NOT.NULL",
+          "availability": "$NOT.NULL",
+          "addresses":[
+            {
+              "gpsLocation": "$NOT.NULL"
+            }
+          ]
+        }
+
+      }
+    }
+  ]
+}

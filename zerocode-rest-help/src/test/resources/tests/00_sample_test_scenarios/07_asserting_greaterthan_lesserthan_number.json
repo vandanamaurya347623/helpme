@@ -1,0 +1,39 @@
+{
+  "scenarioName": "07 asserting greater than or lesser than a number",
+  "steps": [
+    {
+      "name": "step1_get_google_emp_details",
+      "url": "http://localhost:9999/google-emp-services/home/employees/999",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body": {
+          "addresses":"$NOT.NULL" //<--asserting entire content
+        }
+      }
+    },
+    {
+      "name": "step2_get_google_emp_details",
+      "url": "http://localhost:9999/google-emp-services/home/employees/999",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": "$GT.198"   //<--- PASS: 200 is greater than 198
+      }
+    },
+    {
+      "name": "step3_get_google_emp_details",
+      "url": "http://localhost:9999/google-emp-services/home/employees/999",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": "$LT.500"   //<--- PASS: 200 is lesser than 500
+      }
+    }
+
+  ]
+}
