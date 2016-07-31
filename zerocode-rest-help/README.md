@@ -18,8 +18,8 @@ Run the tests i.e. test/.../ZeroCodeSampleUnitRunner.java
 -done-
 
 
-
 Now see the
 * Results @ target/zerocode-test-reports
-* Logs @ target/logs/zerocode_rest_bdd_logs.log
-* Full CSV Report @ target/zerocode_full_report_YYYY-MM-DDTHH-MM-SS.SSS.csv
+* Logs @ target/logs/zerocode_test_logs.log
+* Test coverage CSV Report @ target/zerocode_full_report_YYYY-MM-DDTHH-MM-SS.SSS.csv
+* Test coverage Chart @ target/zerocode_results_chart_YYYY-MM-DDTHH-MM-SS.SSS.html
