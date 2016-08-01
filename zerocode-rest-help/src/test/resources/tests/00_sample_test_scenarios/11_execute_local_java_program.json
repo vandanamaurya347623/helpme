@@ -2,11 +2,20 @@
   "scenarioName": "11_executing_external_java_program",
   "steps": [
     {
-      "name": "create_customer_id_1",
+      "name": "a_pre_step",
       "url": "org.jsmart.zerocode.testhelp.utils.DbCleanUp", //<--- class name
       "operation": "executeSql", //<-- method name
       "request": "/scripts/sql/01_clean_up_db_and_sequences.sql",
       "assertions": {}
+    },
+    {
+      "name": "another_pre_step",
+      "url": "org.jsmart.zerocode.testhelp.utils.DbCleanUp", //<--- class name
+      "operation": "executeSqlReturnStatus", //<-- method name
+      "request": "/scripts/sql/01_clean_up_db_and_sequences.sql",
+      "assertions": {
+        "result" : "SUCCESS"
+      }
     }
   ]
 }

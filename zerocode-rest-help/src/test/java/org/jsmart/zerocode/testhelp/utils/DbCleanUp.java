@@ -6,43 +6,26 @@ public class DbCleanUp {
         System.out.println("Finished executing:" + dbScriptFileName);
     }
 
-    public String create(String somePrefix){
+    public Status executeSqlReturnStatus(String dbScriptFileName){
+        System.out.println("SUCCESS: " + "Finished executing:" + dbScriptFileName);
 
-        return somePrefix + "with-001";
-
+        return new Status("SUCCESS");
     }
 
-    public InternalId createInternalId(String somePrefix){
 
-        return new InternalId(somePrefix + "internal-");
+    class Status {
+        private String result;
 
-    }
-
-    public String createStaticString(String exactString){
-
-        return exactString;
-
-    }
-
-    public InternalId createStaticJson(String exactString){
-
-        return new InternalId(exactString);
-
-    }
-
-    class InternalId {
-        private String id;
-
-        public InternalId(String id) {
-            this.id = id;
+        public Status(String result) {
+            this.result = result;
         }
 
-        public String getId() {
-            return id;
+        public String getResult() {
+            return result;
         }
 
-        public void setId(String id) {
-            this.id = id;
+        public void setResult(String result) {
+            this.result = result;
         }
     }
 }
