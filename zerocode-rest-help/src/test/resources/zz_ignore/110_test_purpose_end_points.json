@@ -33,17 +33,37 @@
         "status": 201,
         "body": {
           "id": 1000,
-          "name": "Larry R",
+          "name": "Larry Pg",
           "availability": true,
           "addresses":[
             {
-              "gpsLocation": "x3000-y5000z-70000"
+              "gpsLocation": "x9000-y9000z-9000-home"
             },
             {
-              "gpsLocation": "x3000-y9000z-2500-N"
+              "gpsLocation": "x9000-y9000z-9000-home-off"
             }
           ]
-
+        }
+      }
+    },
+    {
+      "name": "Sample_Get_Created_Employee_by_Id",
+      "operation": "GET",
+      "url": "/google-emp-services/home/employees/1000",
+      "response": {
+        "status": 200,
+        "body": {
+          "id": 1000,
+          "name": "Larry Pg",
+          "availability": true,
+          "addresses":[
+            {
+              "gpsLocation": "x9000-y9000z-9000-home"
+            },
+            {
+              "gpsLocation": "x9000-y9000z-9000-home-off"
+            }
+          ]
         }
       }
     }

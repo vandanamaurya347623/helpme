@@ -87,6 +87,12 @@ public class ZeroCodeSampleUnitRunner{
 
     }
 
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/12_chaining_multiple_steps_with_prev_response.json")
+    public void willChainMoreStepsWith_previousResponse() throws Exception {
+
+    }
+
     /*
      * NOTE:
      *

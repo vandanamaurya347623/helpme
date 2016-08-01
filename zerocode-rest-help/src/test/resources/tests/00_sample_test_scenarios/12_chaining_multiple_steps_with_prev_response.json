@@ -1,0 +1,45 @@
+{
+  "scenarioName": "12_chaining_multiple_steps_using_previous_response",
+  "steps": [
+    {
+      "name": "create_new_employee",
+      "url": "http://localhost:9999/google-emp-services/home/employees",
+      "operation": "POST",
+      "request": {
+      },
+      "assertions": {
+        "status": 201,
+        "body": {
+          "id": 1000
+        }
+      }
+    },
+    {
+      "name": "get_and_verify_created_employee",
+      "url": "http://localhost:9999/google-emp-services/home/employees/${$.create_new_employee.response.body.id}", //<--- ID from previous response
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "body": {
+          "id": 1000,
+          "name": "${$.create_new_employee.response.body.name}",
+          "addresses": [
+            {
+              "gpsLocation": "${$.create_new_employee.response.body.addresses[0].gpsLocation}"
+            },
+            {
+              "gpsLocation": "${$.create_new_employee.response.body.addresses[1].gpsLocation}"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
