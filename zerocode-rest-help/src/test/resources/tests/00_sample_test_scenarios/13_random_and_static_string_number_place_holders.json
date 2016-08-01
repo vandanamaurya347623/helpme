@@ -1,0 +1,35 @@
+{
+  "scenarioName": "13_random_and_static_string_number_place_holders",
+  "steps": [
+    {
+      "name": "create_new_employee",
+      "url": "http://localhost:9999/google-emp-services/home/employees",
+      "operation": "POST",
+      "request": {
+        "body": {
+          "id": 1000,
+          "name": "Larry ${RANDOM.STRING:5}",   //<-- Random number of length 5 chars
+          "password": "${RANDOM.STRING:10}"     //<-- Random number of length 10 chars
+        }
+      },
+      "assertions": {
+        "status": 201
+      }
+    },
+    {
+      "name": "again_try_to_create_employee_with_same_name_n_password",
+      "url": "http://localhost:9999/google-emp-services/home/employees",
+      "operation": "POST",
+      "request": {
+        "body": {
+          "id": 1000,
+          "name": "${$.create_new_employee.request.body.name}",
+          "password": "${$.create_new_employee.request.body.password}"
+        }
+      },
+      "assertions": {
+        "status": 201
+      }
+    }
+  ]
+}

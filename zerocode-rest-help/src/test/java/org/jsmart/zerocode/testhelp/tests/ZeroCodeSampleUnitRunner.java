@@ -18,7 +18,7 @@ public class ZeroCodeSampleUnitRunner{
      *
      * Right click --> Run
      *
-     * Once finish testing: To stop this REST server, simply press Ctrl+c or Stop button on your IDE
+     * Once finished testing: To stop this REST server, simply press Ctrl+c or Stop button on your IDE
      */
 
     @Test
@@ -28,7 +28,7 @@ public class ZeroCodeSampleUnitRunner{
     }
 
     @Test
-    @JsonTestCase("tests/01_vanila_placeholders/01_create_ids_and_share_among_steps.json")
+    @JsonTestCase("tests/01_vanila_placeholders/01_generatinng_ids_and_sharing_among_steps.json")
     public void willCreateIdsAndShareFor_steps() throws Exception {
 
     }
@@ -93,6 +93,12 @@ public class ZeroCodeSampleUnitRunner{
 
     }
 
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/13_random_and_static_string_number_place_holders.json")
+    public void willGenerateStringsAndNumbers_randomStatic() throws Exception {
+
+    }
+
     /*
      * NOTE:
      *
@@ -102,7 +108,7 @@ public class ZeroCodeSampleUnitRunner{
      *
      * Right click --> Run
      *
-     * Once finish testing: To stop this REST server, simply press Ctrl+c or Stop button on your IDE
+     * Once finished testing: To stop this REST server, simply press Ctrl+c or Stop button on your IDE
      */
 
 }
