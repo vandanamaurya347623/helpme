@@ -45,7 +45,29 @@
       "assertions": {
         "status": 200,
         "body": {
-          "id": "$NUMBER.EQ.${$.create_new_employee.response.body.id}", /* <-- caz id is a number, use $NUMBER.EQ, Otherwise String "100" is not equals to numeric 100 */
+          "id": "$EQ.1000", /* <-- caz id is a number 1000, not a String "1000" */
+          "name": "${$.create_new_employee.response.body.name}",
+          "addresses": [
+            {
+              "gpsLocation": "${$.create_new_employee.response.body.addresses[0].gpsLocation}"
+            },
+            {
+              "gpsLocation": "${$.create_new_employee.response.body.addresses[1].gpsLocation}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "_OR2_get_and_verify_created_employee",
+      "url": "http://localhost:9999/google-emp-services/home/employees/${$.create_new_employee.response.body.id}", //<--- ID from previous response
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body": {
+          "id": "$EQ.${$.create_new_employee.response.body.id}", /* <-- caz id is a number, use $NUMBER.EQ, Otherwise String "100" is not equals to numeric 100 */
           "name": "${$.create_new_employee.response.body.name}",
           "addresses": [
             {
