@@ -75,10 +75,22 @@ public class ZeroCodeSampleUnitRunner{
 
     }
 
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/10_externalizing_host_port_into_properties_file.json")
+    public void willReadHostAndPortFrom_propertiesFile() throws Exception {
+
+    }
+
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/11_execute_local_java_program.json")
+    public void willExecuteExternal_javaProgram() throws Exception {
+
+    }
+
     /*
      * NOTE:
      *
-     * Run the below REST server first, before running any of the above sample tests.
+     * Run the below REST server first, before running the above sample tests.
      *
      * ---> org.jsmart.zerocode.testhelp.tests.RunMeFirstRESTServer
      *
