@@ -2,6 +2,15 @@
   "name" : "Sample Google Web-Employee-Simulator",
   "apis" : [
     {
+      "name": "bare_string_json",
+      "operation": "GET",
+      "url": "/api/simulator/work/101",
+      "response": {
+        "status": 200,
+        "body": "nicely done"
+      }
+    },
+    {
       "name": "Sample_Get_Employee_by_Id",
       "operation": "GET",
       "url": "/google-emp-services/home/employees/999",

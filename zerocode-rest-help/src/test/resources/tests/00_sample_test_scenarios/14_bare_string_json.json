@@ -1,0 +1,16 @@
+{
+  "scenarioName": "14_bare_string_json",
+  "steps": [
+    {
+      "name": "bare_string",
+      "url": "http://localhost:9999/api/simulator/work/101",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body" : "nicely done"
+      }
+    }
+  ]
+}

@@ -99,6 +99,12 @@ public class ZeroCodeSampleUnitRunner{
 
     }
 
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/14_bare_string_json.json")
+    public void willTestBareString_json() throws Exception {
+
+    }
+
     /*
      * NOTE:
      *
