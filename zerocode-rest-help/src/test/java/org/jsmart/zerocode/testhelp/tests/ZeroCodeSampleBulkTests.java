@@ -8,6 +8,6 @@ import org.junit.runner.RunWith;
 @TargetEnv("config_hosts_sample.properties")
 @RunWith(ZeroCodePackageRunner.class)
 @TestPackageRoot("tests")
-public class ZeroCodeSampleBulkRunner {
+public class ZeroCodeSampleBulkTests {
 
 }

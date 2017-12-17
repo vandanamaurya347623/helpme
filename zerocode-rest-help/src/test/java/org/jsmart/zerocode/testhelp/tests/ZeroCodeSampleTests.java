@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 
 @TargetEnv("config_hosts_sample.properties")
 @RunWith(ZeroCodeUnitRunner.class)
-public class ZeroCodeSampleUnitRunner{
+public class ZeroCodeSampleTests {
     /*
      * NOTE:
      *
