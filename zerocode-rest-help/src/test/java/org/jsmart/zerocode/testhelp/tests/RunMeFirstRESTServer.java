@@ -1,7 +1,7 @@
 package org.jsmart.zerocode.testhelp.tests;
 
 import org.jsmart.simulator.annotations.ApiRepo;
-import org.jsmart.simulator.impl.SimpleRestJsonSimulator;
+import org.jsmart.simulator.impl.JsonBasedSimulator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,8 +11,8 @@ import org.slf4j.LoggerFactory;
  * Are you done with the web server ? To stop this REST server, simply press Ctrl+c or Stop button on your IDE
  *
  */
-@ApiRepo("zz_ignore")
-public class RunMeFirstRESTServer extends SimpleRestJsonSimulator {
+@ApiRepo("zz_stubs")
+public class RunMeFirstRESTServer extends JsonBasedSimulator {
     private static final Logger logger = LoggerFactory.getLogger(RunMeFirstRESTServer.class);
 
     public static final int PORT = 9999;

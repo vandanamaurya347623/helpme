@@ -104,6 +104,12 @@ public class ZeroCodeSampleUnitRunner{
     public void willTestBareString_json() throws Exception {
 
     }
+    
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/15_place_holders_of_request_response.json")
+    public void testPlaceHolder_requestResponseJsonPath() throws Exception {
+        
+    }
 
     /*
      * NOTE:

@@ -38,6 +38,7 @@
       "name": "Sample_POST_Employee_Create",
       "operation": "POST",
       "url": "/google-emp-services/home/employees",
+      "ignoreBody": true,
       "response": {
         "status": 201,
         "body": {
@@ -71,6 +72,26 @@
             },
             {
               "gpsLocation": "x9000-y9000z-9000-home-off"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "sample_get_api",
+      "operation": "GET",
+      "url": "/api/testing/v1/persons/UK1001",
+      "response": {
+        "status": 200,
+        "body": {
+          "id": "UK1001",
+          "name": "Bobby Lion",
+          "addresses":[
+            {
+              "line1": "HOME, AECS Layout, ZIP-56094"
+            },
+            {
+              "line1": "OFFICE, Newark, ZIP-730290"
             }
           ]
         }

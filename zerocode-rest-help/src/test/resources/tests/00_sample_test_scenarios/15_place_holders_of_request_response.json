@@ -1,0 +1,31 @@
+{
+  "scenarioName": "15_place_holders_of_request_response.json",
+  "steps": [
+    {
+      "name": "get_an_employee_detail",
+      "url": "http://localhost:9999/api/testing/v1/persons/UK1001",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": 200,
+        "body": {
+          "id": "${$.get_an_employee_detail.response.body.id}"
+        }
+      }
+    },
+    {
+      "name": "get_same_employee",
+      "url": "http://localhost:9999/api/testing/v1/persons/${$.get_an_employee_detail.response.body.id}",
+      "operation": "GET",
+      "request": {
+      },
+      "assertions": {
+        "status": "$EQ.${$.get_an_employee_detail.response.status}",
+        "body": {
+          "id": "${$.get_an_employee_detail.response.body.id}"
+        }
+      }
+    }
+  ]
+}
