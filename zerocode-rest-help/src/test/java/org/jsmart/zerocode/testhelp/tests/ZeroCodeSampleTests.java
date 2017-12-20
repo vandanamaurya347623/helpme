@@ -111,6 +111,12 @@ public class ZeroCodeSampleTests {
         
     }
 
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/16_passing_headers_to_rest_apis.json")
+    public void testSend_headers() throws Exception {
+
+    }
+
     /*
      * NOTE:
      *

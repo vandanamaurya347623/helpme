@@ -1,0 +1,25 @@
+{
+    "scenarioName": "16_passing_headers_to_rest_apis",
+    "steps": [
+        {
+            "name": "create_new_employee",
+            "url": "http://localhost:9999/google-emp-services/home/employees",
+            "operation": "POST",
+            "request": {
+                "headers": {
+                    "clientId": "client-sadfsdf-twertert-13123",
+                    "clientSecret": "pwd-sadfasdf1234234-sdfsdf-4234",
+                    "customParam1": "customParam1Value"
+                },
+                "body": {
+                    "id": 1000,
+                    "name": "Larry ${RANDOM.STRING:5}",
+                    "password": "${RANDOM.STRING:10}"
+                }
+            },
+            "assertions": {
+                "status": 201
+            }
+        }
+    ]
+}
