@@ -117,6 +117,11 @@ public class ZeroCodeSampleTests {
 
     }
 
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/17_hello_world_headers_assert.json")
+    public void testAssert_headers() throws Exception {
+
+    }
     /*
      * NOTE:
      *
