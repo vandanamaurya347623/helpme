@@ -45,7 +45,7 @@ public class HelloWorldTest {
 }
 
 ------------------------------------------------------------
--  "rc/test/resources/hello_world_host.properties" contains:
+-  "src/test/resources/hello_world_host.properties" contains:
 ------------------------------------------------------------
 # Web Server host and port
 restful.application.endpoint.host=https://jsonplaceholder.typicode.com
