@@ -7,8 +7,29 @@ import org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+
+/**
+
+ Set "ENV_NAME=ci" in Jenkins (or via .profile in a Unix machine, System/User properties in Windows)
+ then the runner picks "hello_world_host_ci.properties" and runs.
+ If ENV_NAME not set, then defaults to "hello_world_host.properties" mentioned via @TargetEnv
+
+ -or-
+
+ Configure the below `mvn goal` when you run via Jenkins goal in the specific environment-
+
+ For CI :
+ mvn clean install -DENV_NAME=ci
+
+ For SIT:
+ mvn clean install -DENV_NAME=sit
+
+ and make sure:
+ hello_world_host_ci.properties and hello_world_host_sit.properties etc are available in the resources folder or class path.
+
+ */
+@EnvProperty("_${ENV_NAME}")
 @TargetEnv("hello_world_host.properties")
-@EnvProperty("${ENV_NAME}_") //e.g. set "ENV_NAME=ci" in Jenkins or via .profile in a Unix machine, then zerocode picks pick 'ci_hello_world_host.properties'. If ENV_NAME was not set, then it defaults to "hello_world_host.properties"
 @RunWith(ZeroCodeUnitRunner.class)
 public class EnvPropertyHelloWorldTest {
 
