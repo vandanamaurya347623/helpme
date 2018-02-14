@@ -122,6 +122,12 @@ public class ZeroCodeSampleTests {
     public void testAssert_headers() throws Exception {
 
     }
+
+    @Test
+    @JsonTestCase("tests/00_sample_test_scenarios/18_date_and_datetime_today_generator.json")
+    public void testGenerateTodayDateAndTime() throws Exception {
+
+    }
     /*
      * NOTE:
      *

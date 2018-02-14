@@ -1,0 +1,26 @@
+{
+    "scenarioName": "18_date_and_datetime_today_generator",
+    "steps": [
+        {
+            "name": "create_new_employee",
+            "url": "http://localhost:9999/google-emp-services/home/employees",
+            "operation": "POST",
+            "request": {
+                "headers": {
+                    "clientId": "client-sadfsdf-twertert-13123",
+                    "clientSecret": "pwd-sadfasdf1234234-sdfsdf-4234",
+                    "customParam1": "customParam1Value"
+                },
+                "body": {
+                    "id": 1000,
+                    "createdDay": "${LOCAL.DATE.TODAY:yyyy-MM-dd}",
+                    "createdDayTimeStamp": "${LOCAL.DATETIME.NOW:yyyy-MM-dd'T'HH:mm:ss.nnnnnnnnn}",
+                    "randomUniqueValue": "${LOCAL.DATETIME.NOW:yyyyMMdd'T'HHmmssnnnnnnnnn}"
+                }
+            },
+            "assertions": {
+                "status": 201
+            }
+        }
+    ]
+}

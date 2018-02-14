@@ -1,6 +1,13 @@
 package org.jsmart.zerocode.testhelp.utils;
 
+import com.google.inject.Inject;
+import com.google.inject.name.Named;
+
 public class YourIdGenerator {
+
+    @Inject
+    @Named("jdbc.url.host")
+    private String jdbcHost;
 
     public String create(String somePrefix){
 
@@ -9,6 +16,8 @@ public class YourIdGenerator {
     }
 
     public InternalId createInternalId(String somePrefix){
+
+        System.out.println("######### jdbcHost injected: " + jdbcHost);
 
         return new InternalId(somePrefix + "internal-");
 
