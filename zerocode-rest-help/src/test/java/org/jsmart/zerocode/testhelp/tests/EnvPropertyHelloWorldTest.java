@@ -10,25 +10,25 @@ import org.junit.runner.RunWith;
 
 /**
 
- Set "ENV_NAME=ci" in Jenkins (or via .profile in a Unix machine, System/User properties in Windows)
+ Set "envName=ci" in Jenkins (or via .profile in a Unix machine, System/User properties in Windows)
  then the runner picks "hello_world_host_ci.properties" and runs.
- If ENV_NAME not set, then defaults to "hello_world_host.properties" mentioned via @TargetEnv
+ If envName not set, then defaults to "hello_world_host.properties" mentioned via @TargetEnv
 
  -or-
 
  Configure the below `mvn goal` when you run via Jenkins goal in the specific environment-
 
  For CI :
- mvn clean install -DENV_NAME=ci
+ mvn clean install -DenvName=ci
 
  For SIT:
- mvn clean install -DENV_NAME=sit
+ mvn clean install -DenvName=sit
 
  and make sure:
  hello_world_host_ci.properties and hello_world_host_sit.properties etc are available in the resources folder or class path.
 
  */
-@EnvProperty("_${ENV_NAME}")
+@EnvProperty("_${envName}")
 @TargetEnv("hello_world_host.properties")
 @RunWith(ZeroCodeUnitRunner.class)
 public class EnvPropertyHelloWorldTest {
