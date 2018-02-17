@@ -43,5 +43,11 @@ public class SoapEndPointTest {
     public void testSoap12With_contentTypeOnly() throws Exception {
 
     }
+
+    @Test
+    @JsonTestCase("soap/soap1.2_endpoint_object_type_response_500.json")
+    public void testSoap12With_ObjectTypeResturn() throws Exception {
+
+    }
 }
 
