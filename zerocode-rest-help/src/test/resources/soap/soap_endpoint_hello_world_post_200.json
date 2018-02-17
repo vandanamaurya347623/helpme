@@ -1,0 +1,22 @@
+{
+    "scenarioName": "GIVEN a Hello World SOAP end point WHEN I invoke a method with a request XML, THEN I will get the SOAP response in XML",
+    "steps": [
+        {
+            "name": "invoke_currency_conversion",
+            "url": "http://secure.smartbearsoftware.com/samples/testcomplete12/webservices/Service.asmx",
+            "operation": "POST",
+            "request": {
+                "headers": {
+                    "Content-Type": "text/xml; charset=utf-8",
+                    "SOAPAction": "\"http://smartbear.com/HelloWorld\""
+                    //"SOAPAction": "http://www.webserviceX.NET/ConversionRate"
+                },
+                "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <HelloWorld xmlns=\"http://smartbear.com\" />\n  </soap:Body>\n</soap:Envelope>"
+            },
+            "assertions": {
+                "status": 200,
+                "rawBody" : "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><HelloWorldResponse xmlns=\"http://smartbear.com\"><HelloWorldResult>Hello World</HelloWorldResult></HelloWorldResponse></soap:Body></soap:Envelope>"
+            }
+        }
+    ]
+}

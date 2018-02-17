@@ -1,0 +1,28 @@
+{
+    "scenarioName": "GIVEN a SOAP end point WHEN I invoke a method with a request XML, THEN I will get response in XML Node Type",
+    "steps": [
+        {
+            "name": "invoke_currency_conversion",
+            "url": "http://secure.smartbearsoftware.com/samples/testcomplete12/webservices/Service.asmx",
+            "operation": "POST",
+            "request": {
+                "headers": {
+                    "Content-Type": "text/xml; charset=utf-8",
+                    "SOAPAction": "\"http://smartbear.com/GetXmlData\""
+                },
+                "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetXmlData xmlns=\"http://smartbear.com\" />\n  </soap:Body>\n</soap:Envelope>"
+            },
+            "assertions": {
+                "status" : 200,
+                "headers" : {
+                    "Server" : [ "Microsoft-IIS/10.0" ],
+                    "Content-Length" : [ "760" ],
+                    "X-Powered-By" : [ "ASP.NET" ],
+                    "Content-Type" : [ "text/xml; charset=utf-8" ],
+                    "Cache-Control" : [ "private, max-age=0" ]
+                },
+                "rawBody" : "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><GetXmlDataResponse xmlns=\"http://smartbear.com\"><GetXmlDataResult><x:books xmlns:x=\"urn:books\"><book id=\"bk001\" xmlns=\"\"><author>Writer</author><title>The First Book</title><genre>Fiction</genre><price>44.95</price><pub_date>2000-10-01</pub_date><review>An amazing story of nothing.</review></book><book id=\"bk002\" xmlns=\"\"><author>Poet</author><title>The Poet's First Poem</title><genre>Poem</genre><price>24.95</price><review>Least poetic poems.</review></book></x:books></GetXmlDataResult></GetXmlDataResponse></soap:Body></soap:Envelope>"
+            }
+        }
+    ]
+}

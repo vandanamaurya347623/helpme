@@ -1,0 +1,26 @@
+{
+    "scenarioName": "GIVEN a SOAP 1.2 end point WHEN I invoke a method with a request XML, THEN I will get response XML Type",
+    "steps": [
+        {
+            "name": "invoke_object_type",
+            "url": "http://secure.smartbearsoftware.com/samples/testcomplete12/webservices/Service.asmx",
+            "operation": "POST",
+            "request": {
+                "headers": {
+                    "Content-Type": "application/soap+xml; charset=utf-8"  //<--- careful about this
+                },
+                "body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap12:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\n  <soap12:Body>\n    <GetXmlData xmlns=\"http://smartbear.com\" />\n  </soap12:Body>\n</soap12:Envelope>"
+            },
+            "assertions": {
+                "status" : 200,
+                "headers" : {
+                    "Server" : [ "Microsoft-IIS/10.0" ],
+                    "X-Powered-By" : [ "ASP.NET" ],
+                    "Content-Type" : [ "application/soap+xml; charset=utf-8" ], //<--- careful about this
+                    "Cache-Control" : [ "private, max-age=0" ]
+                },
+                "rawBody" : "<?xml version=\"1.0\" encoding=\"utf-8\"?><soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\"><soap:Body><GetXmlDataResponse xmlns=\"http://smartbear.com\"><GetXmlDataResult><x:books xmlns:x=\"urn:books\"><book id=\"bk001\" xmlns=\"\"><author>Writer</author><title>The First Book</title><genre>Fiction</genre><price>44.95</price><pub_date>2000-10-01</pub_date><review>An amazing story of nothing.</review></book><book id=\"bk002\" xmlns=\"\"><author>Poet</author><title>The Poet's First Poem</title><genre>Poem</genre><price>24.95</price><review>Least poetic poems.</review></book></x:books></GetXmlDataResult></GetXmlDataResponse></soap:Body></soap:Envelope>"
+            }
+        }
+    ]
+}
