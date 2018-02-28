@@ -1,0 +1,21 @@
+{
+    "scenarioName": "scenario_hello_world_get",
+    "steps": [
+        {
+            "name": "get_user_details",
+            "url": "/posts/1",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "id": 1,
+                    "userId": 1,
+                    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
+                }
+            }
+        }
+
+    ]
+}
