@@ -9,16 +9,19 @@ Import the maven project "zerocode-rest-help" i.e. /helpme/zerocode-rest-help/po
 Start the REST server i.e. just Run as main() -> test/.../RunMeFirstRESTServer.java
 
 > Step-3: 
-Run the tests i.e. test/.../ZeroCodeSampleUnitRunner.java
+Run the tests one by one as JUnit way i.e. ZeroCodeSampleTests.java under `src/test/java/org/jsmart/zerocode/testhelp/tests/`
 
 > -OR-
 
-> Run all tests in folder "tests" i.e. test/.../ZeroCodeSampleBulkRunner.java
+> Run all tests in folder "tests" as Suite i.e. ZeroCodeSampleBulkTests.java under `src/test/java/org/jsmart/zerocode/testhelp/tests/`
+
+That's it. Now you can fiddle with the values in the `assertions` section of any test and re-run to FAIL it, 
+then update to correct value to PASS it.
 
 -done-
 
 
-Now see the
+Now look for the-
 * Results @ target/zerocode-test-reports
 * Logs @ target/logs/zerocode_test_logs.log
 * Test coverage CSV Report @ target/zerocode_full_report_YYYY-MM-DDTHH-MM-SS.SSS.csv
