@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+
+    <title>$highChartColumnHtml.pageTitle</title>
+
+    <style>
+        body{
+            margin-top: 30px;
+            margin-left:40px;
+        }
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+
+
+            var processed_test_result = [{name: '01_create_idsand_share_among_steps @@Jonathon Taylor@@->create_customer_id_1', y: 12.0}, {name: '01_create_idsand_share_among_steps @@Jonathon Taylor@@->create_customer_id_1', y: 7.0}, {name: '01_create_idsand_share_among_steps @@Jonathon Taylor@@->create_customer_id_2', y: 1.0}, {name: '01_create_idsand_share_among_steps @@Jonathon Taylor@@->create_customer_id_3', y: 1.0}, {name: '01_create_idsand_share_among_steps @@Jonathon Taylor@@->get_google_emp_details', y: 127.0}, {name: '01_create_idsand_share_among_steps @@Jonathon Taylor@@->create_customer_id_4', y: 1.0}, {name: '01_create_idsand_share_among_steps @@Jonathon Taylor@@->get_google_emp_details', y: 5.0, color: '#FF0000'}, {name: '07 asserting greater than or lesser than a number @@ManningDavid@@->step1_get_google_emp_details', y: 6.0}, {name: '07 asserting greater than or lesser than a number @@ManningDavid@@->step2_get_google_emp_details', y: 5.0}, {name: '07 asserting greater than or lesser than a number @@ManningDavid@@->step3_get_google_emp_details', y: 4.0}, {name: '09 asserting string messages part and whole @@James B@@->step1_get_google_emp_details', y: 4.0}, {name: '10 host and port into a properties file @@KatyP->step1_get_google_emp_details', y: 6.0}, {name: '11_executing_external_java_program @@PhilipDavid->a_pre_step', y: 4.0}, {name: '11_executing_external_java_program @@PhilipDavid->another_pre_step', y: 3.0}, {name: '12_chaining_multiple_steps_using_previous_response @@PhilipDavid->create_new_employee', y: 7.0}, {name: '12_chaining_multiple_steps_using_previous_response @@PhilipDavid->get_and_verify_created_employee', y: 7.0}, {name: '12_chaining_multiple_steps_using_previous_response @@PhilipDavid->_OR_get_and_verify_created_employee', y: 4.0}, {name: '12_chaining_multiple_steps_using_previous_response @@PhilipDavid->_OR2_get_and_verify_created_employee', y: 5.0}, {name: '13_random_and_static_string_number_place_holders @@Rolland->create_new_employee', y: 7.0}, {name: '13_random_and_static_string_number_place_holders @@Rolland->again_try_to_create_employee_with_same_name_n_password', y: 3.0}, {name: '14_bare_string_json @@JohnSmart->bare_string', y: 6.0}, {name: '15_place_holders_of_request_response.json @@JohnSmart->get_an_employee_detail', y: 9.0, color: '#FF0000'}, {name: '16_passing_headers_to_rest_apis @@JohnSmart->create_new_employee', y: 7.0}, {name: '17_hello_world_headers_assert @@PaulBerry->get_hello', y: 363.0, color: '#FF0000'}, {name: '18_date_and_datetime_today_generator @@Paul Berry@@->create_new_employee', y: 25.0}, {name: 'assert json content @@KatyP@@->step1_get_google_emp_details', y: 7.0}, {name: 'assert json content @@KatyP@@->step2_get_google_emp_details', y: 9.0}, {name: 'assert with placeholders empty[] @@SimronS@@->step1_get_google_emp_details', y: 9.0}, {name: 'assert with placeholders NOT.NULL @@EmmaMill@@->step1_get_google_emp_details', y: 5.0}, {name: 'Given teh URL, when I do GET, Then I will see the  result with ID of a person @@Steve->get_person', y: 6.0, color: '#FF0000'}, {name: 'Vanilla - Execute multiple times - Scenario @@Sandra Bull@@->get_room_details', y: 7.0}, {name: 'Vanilla - Execute multiple times - Scenario @@Sandra Bull@@->get_another_room_details', y: 8.0}, {name: 'Vanilla - Execute multiple times - Scenario @@Sandra Bull@@->get_room_details', y: 4.0}, {name: 'Vanilla - Execute multiple times - Scenario @@Sandra Bull@@->get_another_room_details', y: 5.0}, {name: 'Vanilla - Execute multiple times - Step @@Amit Gupta@@->get_room_details', y: 9.0}, {name: 'Vanilla - Execute multiple times - Step @@Amit Gupta@@->get_room_details1', y: 6.0}];
+            $(function () {
+
+                // draw chart
+                $('#container').highcharts({
+                    chart: {
+                        type: "column"
+                    },
+                    title: {
+                        text: "Request Vs Response Delay Chart"
+                    },
+                    xAxis: {
+                        type: 'category',
+                        allowDecimals: false,
+                        title: {
+                            text: ""
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                                                        text: "Response Delay in Milli Sec"
+                        }
+                    },
+                    series: [{
+                                                name: 'Test Results',
+                        data: processed_test_result
+                    }]
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div style="width: 200px; margin: 2em auto; padding: 2em; border: 1px solid #ff2740; border-radius: 1em">
+
+  Spike Chart ( Milli Seconds )
+
+</div>
+<div id="container" style="height: 400px"></div>
+
+</body>
+</html>
