@@ -1,5 +1,5 @@
 {
-  "scenarioName": "01_create_idsand_share_among_steps.json",
+  "scenarioName": "01_create_idsand_share_among_steps @@Jonathon Taylor@@",
   "steps": [
     {
       "name": "create_customer_id_1",
@@ -64,7 +64,7 @@
         "status": 200,
         "body" : {
           "id" : 999,
-          "addresses.SIZE" : 2
+          "addresses.SIZE" : 5
         }
       }
     }

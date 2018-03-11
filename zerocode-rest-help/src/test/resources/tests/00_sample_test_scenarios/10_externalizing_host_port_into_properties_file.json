@@ -1,5 +1,5 @@
 {
-  "scenarioName": "10 host and port into a properties file",
+  "scenarioName": "10 host and port into a properties file @@KatyP",
   "steps": [
     {
       "name": "step1_get_google_emp_details",

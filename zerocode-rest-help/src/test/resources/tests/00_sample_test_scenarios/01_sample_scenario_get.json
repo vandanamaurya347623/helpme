@@ -1,15 +1,25 @@
 {
-  "scenarioName": "Vanilla - Will Get Google Employee Details",
-  "steps": [
-    {
-      "name": "step1_get_google_emp_details",
-      "url": "http://localhost:9999/google-emp-services/home/employees/999",
-      "operation": "GET",
-      "request": {
-      },
-      "assertions": {
-        "status": 200
-      }
-    }
-  ]
+    "scenarioName": "Given teh URL, when I do GET, Then I will see the  result with ID of a person @@Steve",
+    "steps": [
+        {
+            "name": "get_person",
+            "url": "http://localhost:9999/google-emp-services/home/employees/999",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 400
+            }
+        },
+        {
+            "name": "get_added",
+            "url": "http://localhost:9999/google-emp-services/home/employees/999",
+            "operation": "GET",
+            "request": {
+            },
+            "assertions": {
+                "status": 400
+            }
+        }
+    ]
 }

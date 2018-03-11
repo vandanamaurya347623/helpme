@@ -1,5 +1,5 @@
 {
-  "scenarioName": "assert with placeholders NOT.NULL",
+  "scenarioName": "assert with placeholders NOT.NULL @@EmmaMill@@",
   "steps": [
     {
       "name": "step1_get_google_emp_details",

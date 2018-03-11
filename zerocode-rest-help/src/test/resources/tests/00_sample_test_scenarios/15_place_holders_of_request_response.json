@@ -1,5 +1,5 @@
 {
-  "scenarioName": "15_place_holders_of_request_response.json",
+  "scenarioName": "15_place_holders_of_request_response.json @@JohnSmart",
   "steps": [
     {
       "name": "get_an_employee_detail",
@@ -8,7 +8,7 @@
       "request": {
       },
       "assertions": {
-        "status": 200,
+        "status": 302,
         "body": {
           "id": "${$.get_an_employee_detail.response.body.id}"
         }

@@ -1,5 +1,5 @@
 {
-    "scenarioName": "18_date_and_datetime_today_generator",
+    "scenarioName": "18_date_and_datetime_today_generator @@Paul Berry@@",
     "steps": [
         {
             "name": "create_new_employee",

@@ -1,5 +1,5 @@
 {
-    "scenarioName": "16_passing_headers_to_rest_apis",
+    "scenarioName": "16_passing_headers_to_rest_apis @@JohnSmart",
     "steps": [
         {
             "name": "create_new_employee",

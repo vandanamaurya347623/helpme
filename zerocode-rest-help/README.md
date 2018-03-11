@@ -3,10 +3,14 @@
 #### How to run the examples?
 
 > Step-1: 
-Import the maven project "zerocode-rest-help" i.e. /helpme/zerocode-rest-help/pom.xml
+Import the maven project `zerocode-rest-help` i.e. /helpme/zerocode-rest-help/pom.xml
 
 > Step-2: 
-Start the REST server i.e. just Run as main() -> test/.../RunMeFirstRESTServer.java
+Start the `Mock REST server` i.e. just Run as main() -> src/test/java/org/jsmart/zerocode/testhelp/tests/RunMeFirstRESTServer.java
+
+Note- 
+You need not do this Step-2 if you have a real or mock REST service running somewhere else. 
+You can simply update the `host` and `port` information in the config file. of your test.
 
 > Step-3: 
 Run the tests one by one as JUnit way i.e. ZeroCodeSampleTests.java under `src/test/java/org/jsmart/zerocode/testhelp/tests/`
@@ -25,7 +29,7 @@ Now look for the-
 * Results @ target/zerocode-test-reports
 * Logs @ target/logs/zerocode_test_logs.log
 * Test coverage CSV Report @ target/zerocode_full_report_YYYY-MM-DDTHH-MM-SS.SSS.csv
-* Test coverage Chart @ target/zerocode_results_chart_YYYY-MM-DDTHH-MM-SS.SSS.html
+* Test coverage Chart @ target/zerocode-interactive.html
 
 
 Search

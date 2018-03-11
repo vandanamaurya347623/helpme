@@ -5,21 +5,9 @@ import org.jsmart.zerocode.core.domain.TargetEnv;
 import org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 @TargetEnv("config_hosts_sample.properties")
 @RunWith(ZeroCodeUnitRunner.class)
 public class ZeroCodeSampleTests {
-    /*
-     * NOTE:
-     *
-     * Run the below REST server first, before running the following sample tests.
-     *
-     * ---> org.jsmart.zerocode.testhelp.tests.RunMeFirstRESTServer
-     *
-     * Right click --> Run
-     *
-     * Once finished testing: To stop this REST server, simply press Ctrl+c or Stop button on your IDE
-     */
 
     @Test
     @JsonTestCase("tests/00_sample_test_scenarios/01_sample_scenario_get.json")
