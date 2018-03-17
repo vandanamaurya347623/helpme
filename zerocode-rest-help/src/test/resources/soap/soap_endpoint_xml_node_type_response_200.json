@@ -16,7 +16,6 @@
                 "status" : 200,
                 "headers" : {
                     "Server" : [ "Microsoft-IIS/10.0" ],
-                    "Content-Length" : [ "760" ],
                     "X-Powered-By" : [ "ASP.NET" ],
                     "Content-Type" : [ "text/xml; charset=utf-8" ],
                     "Cache-Control" : [ "private, max-age=0" ]
